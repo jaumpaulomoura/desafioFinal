@@ -1,0 +1,44 @@
+.menu{
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 600px){
+    display: none;
+  }
+
+  li{
+    a{
+      border-bottom: 1px solid transparent;
+      transition: all ease-in-out 300ms;
+      padding: 0 10px 10px 10px;
+      font-size: 20px;
+      font-weight: 600;
+      &:hover{
+        border-color: #FFF;
+        opacity: .5;
+      }
+    }
+  }
+}
+
+.menu-mobile{
+  display: none;
+
+  @media (max-width: 600px){
+    display: block;
+  }
+
+  button{
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    svg{
+      width: 30px;
+      fill: #FFF;
+    }
+  }
+
+  ul{
+    display: none;
+  }
+}

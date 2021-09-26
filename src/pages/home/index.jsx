@@ -20,7 +20,7 @@ export default function API() {
     useEffect(() => {
       async function getPhoto() {
         const response = await fetch(
-          "https://jsonplaceholder.typicode.com/albums/1/photos"
+          "https://jsonplaceholder.typicode.com/photos"
         );
         const data = await response.json();
   
@@ -46,40 +46,36 @@ export default function API() {
               <Arrow />
             </a>
 
+            <div className="thumbs">
+              <button onClick={() => setIndice(0)}>
+                <img
+                  className={indice === 0 ? "active" : "normal"}
+                  src={dados[0].thumbnailUrl}
+                  alt="imagem" />
+              </button>
+
+              <button onClick={() => setIndice(1)}>
+                <img
+                  className={indice === 1 ? "active" : "normal"}
+                  src={dados[1].thumbnailUrl}
+                  alt="imagem" />
+              </button>
+
+              <button onClick={() => setIndice(2)}>
+                <img
+                  className={indice === 2 ? "active" : "normal"}
+                  src={dados[2].thumbnailUrl}
+                  alt="imagem" />
+              </button>
+
+              <button onClick={() => setIndice(3)}>
+                <img
+                  className={indice === 3 ? "active" : "normal"}
+                  src={dados[3].thumbnailUrl}
+                  alt="imagem" />
+              </button>
+            </div>
           </div>
-
-
-          <div className="thumbs">
-
-            <button onClick={() => setIndice(0)}>
-              <img
-                className={indice === 0 ? "active" : "normal"}
-                src={dados[0].thumbnailUrl}
-                alt="imagem" />
-            </button>
-
-            <button onClick={() => setIndice(1)}>
-              <img
-                className={indice === 1 ? "active" : "normal"}
-                src={dados[1].thumbnailUrl}
-                alt="imagem" />
-            </button>
-
-            <button onClick={() => setIndice(2)}>
-              <img
-                className={indice === 2 ? "active" : "normal"}
-                src={dados[2].thumbnailUrl}
-                alt="imagem" />
-            </button>
-
-            <button onClick={() => setIndice(3)}>
-              <img
-                className={indice === 3 ? "active" : "normal"}
-                src={dados[3].thumbnailUrl}
-                alt="imagem" />
-            </button>
-          </div>
-
 
           <div className="home-right">
             <div className="display">

@@ -1,44 +1,17 @@
-.menu{
+header{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 64px;
 
   @media (max-width: 600px){
-    display: none;
+    padding: 20px;
   }
 
-  li{
-    a{
-      border-bottom: 1px solid transparent;
-      transition: all ease-in-out 300ms;
-      padding: 0 10px 10px 10px;
-      font-size: 20px;
-      font-weight: 600;
-      &:hover{
-        border-color: #FFF;
-        opacity: .5;
-      }
+  svg{
+    @media (max-width: 600px){
+      width: 60%;
     }
-  }
-}
-
-.menu-mobile{
-  display: none;
-
-  @media (max-width: 600px){
-    display: block;
-  }
-
-  button{
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-    svg{
-      width: 30px;
-      fill: #FFF;
-    }
-  }
-
-  ul{
-    display: none;
   }
 }
